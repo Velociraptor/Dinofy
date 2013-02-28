@@ -15,17 +15,17 @@ $(function () {
       //clickToggle = 0;
     } else {
       player1.playVideo();
-      setTimeout(player1.pauseVideo(), 5);
+      setTimeout(player1.pauseVideo(), 2);
       $('#player1').width(1);
       $('#player1').height(1);
       //clickToggle = 1;
       //$('#player1-container-container').css({display:"none"});
-    }
+    };
     }
 
   $('#switchButton').click(function (id) {
     if (clickToggle == 0) {
-      //clickToggle = 1;
+      clickToggle = 1;
       $('#player1').width(425);
       $('#player1').height(356);
       console.log(clickToggle);
