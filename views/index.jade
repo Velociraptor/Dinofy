@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  h1= title
+
+  h2= "I am a Youtube Video"
+    
+  iframe(id="video1", width="420", height="345", src="http://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1")
+  
+  iframe(style="display:none", id="video2", width="420", height="345", src="http://www.youtube.com/embed/MEbm-xLjEwk")
+
+  //&t=0m50s")
+
+  div(class="row")
+    button(id="switchButton", class="btn btn-large btn-primary span2 offset2")
+      | Switch
