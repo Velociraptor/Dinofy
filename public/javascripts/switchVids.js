@@ -16,26 +16,27 @@ $(function () {
     } else {
       player1.playVideo();
       setTimeout(player1.pauseVideo(), 2);
+
       $('#player1').width(1);
       $('#player1').height(1);
-      //clickToggle = 1;
-      //$('#player1-container-container').css({display:"none"});
+
     };
     }
 
   $('#switchButton').click(function (id) {
     if (clickToggle == 0) {
       clickToggle = 1;
+
       $('#player1').width(425);
       $('#player1').height(356);
+
       console.log(clickToggle);
       player1.playVideo();
       $('#video1').css({display:"none"});
     } else {
       clickToggle = 0;
-      //console.log(clickToggle);
+
       player1.stopVideo();
-      //$('#player1-container-container').css({display:"none"});
       $('#player1').width(1);
       $('#player1').height(1);
       $('#video1').css({display:""});

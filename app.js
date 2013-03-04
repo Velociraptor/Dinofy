@@ -7,9 +7,14 @@ var express = require('express')
   , routes = require('./routes')
   , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , echojs = require('echojs');
 
 var app = express();
+
+var echo = echojs({
+  key: 'LI1N2JJN3TQBT59SD'
+});
 
 app.configure(function(){
   app.set('port', process.env.PORT || 3000);
@@ -30,6 +35,8 @@ app.configure('development', function(){
 app.get('/', routes.index);
 app.get('/upload', user.upload);
 app.get('/users', user.list);
+
+app.post('/artist', user.artist_search);
 
 http.createServer(app).listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
