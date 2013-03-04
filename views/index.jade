@@ -1,11 +1,8 @@
 extends layout
 
 block content
-  h1= title
 
-  h2= "I am a Youtube Video"
-
-  h3= artist
+  h1= artist
     
   //- iframe(id="video1", width="425", height="356", src="http://www.youtube.com/embed/oHg5SJYRHA0?autoplay=1")
   iframe(id="video1", width="425", height="356", src="http://www.youtube.com/embed/" + url + "?autoplay=1")
@@ -19,7 +16,7 @@ block content
   div(class="row")
     //-style='margin-top:400px'
     button(id="switchButton", class="btn btn-large btn-primary span2 offset2")
-      | Switch
+      | Dinofy Me
 
-  form(class="row span2 offset1", style="margin-top: 10px", id="get_artist", action='/artist', method='post')
+  form(class="span2 offset1", style="margin-top: 20px; padding-left:20px", id="get_artist", action='/artist', method='post')
     input(type='text', placeholder='Artist', name='artist')
