@@ -13,6 +13,7 @@ $(function () {
 
   window.onYouTubePlayerReady = function(id)
   {
+    document.getElementById('switchButton').innerHTML = "Dinofy Me";
     var player1 = document.getElementById('player1');
     console.log('I am here now');
     if (clickToggle == 1) {
@@ -45,6 +46,7 @@ $(function () {
       player1.playVideo();
 
       $('#video1').css({display:"none"});
+      document.getElementById('switchButton').innerHTML = "Un Dinofy";
 
     } else {
       clickToggle = 0;
@@ -54,7 +56,8 @@ $(function () {
       
       $('#player1').width(1);
       $('#player1').height(1);
-      $('#video1').css({display:""});
+      $('#video1').css({display:""});;
+      document.getElementById('switchButton').innerHTML = "Dinofy Me";
     };
   });
     return false;

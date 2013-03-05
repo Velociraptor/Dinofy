@@ -15,8 +15,8 @@ block content
 
   div(class="row")
     //-style='margin-top:400px'
-    button(id="switchButton", class="btn btn-large btn-primary span2 offset2")
-      | Dinofy Me
+    button(id="switchButton", class="btn btn-large btn-primary span2 offset2", text="Dinofy Me")
+      //- Dinofy Me
 
   form(class="span2 offset1", style="margin-top: 20px; padding-left:20px", id="get_artist", action='/artist', method='post')
     input(type='text', placeholder='Artist', name='artist')
